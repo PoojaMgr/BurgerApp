@@ -1,0 +1,87 @@
+{
+    "data": [
+        {
+            "product": {
+                "id": "1",
+                "name": "Mc Aloo Tikki",
+                "price": "150",
+                "ingredients": "Potato Onions",
+                "discount": "10%",
+                "size": "XL",
+                "type": "Veg",
+                "rating":"5star",
+                "imgurl": "http://www.myiconfinder.com/uploads/iconsets/256-256-50d2bb24a01a3c32510470c6cf675782-burger.png"
+            }
+            
+        },
+        {
+            "product": {
+                "id": "2",
+                "name": "Mc Paneer Tikki",
+                "price": "250",
+                "ingredients": "Paneer Onions",
+                "discount": "5%",
+                "size": "XL",
+                "type": "Veg",
+                "rating":"5star",
+                "imgurl": "http://www.myiconfinder.com/uploads/iconsets/256-256-712c55fa0cd7192cafd33f43fb022ab9-burger.png"
+            }
+            
+        },
+        {
+            "product": {
+                "id": "3",
+                "name": "Hamburger",
+                "price": "150",
+                "ingredients": "Potato Onions",
+                "discount": "10%",
+                "size": "XL",
+                "type": "Veg",
+                "rating":"3star",
+                "imgurl": "http://www.myiconfinder.com/uploads/iconsets/256-256-8a98392e8674eb71887ee57b861dd1c0-Burger.png"
+            }
+            
+        },
+        {
+            "product": {
+                "id": "4",
+                "name": "Cheese Burger",
+                "price": "380",
+                "ingredients": "Cheese",
+                "discount": "5%",
+                "size": "XL",
+                "type": "Veg","rating":"4star",
+                "imgurl": "http://www.myiconfinder.com/uploads/iconsets/256-256-b555b9e8a28b31a79899f3ab9c0ec7be.png"
+            }
+            
+        },
+        {
+            "product": {
+                "id": "1",
+                "name": "Chicken Burger",
+                "price": "450",
+                "ingredients": "Potato Onions",
+                "discount": "10%",
+                "size": "XL",
+                "type": "Non-Veg",
+                "rating":"3star",
+                "imgurl": "http://www.myiconfinder.com/uploads/iconsets/256-256-e7c12d8f317926570e59221efb753a4d.png"
+            }
+            
+        },
+        {
+            "product": {
+                "id": "1",
+                "name": "Black Burger",
+                "price": "500",
+                "ingredients": "Potato Onions",
+                "discount": "10%",
+                "size": "XL",
+                "type": "Veg",
+                "rating":"3star",
+                "imgurl": "http://www.myiconfinder.com/uploads/iconsets/256-256-507094261a31a18abfd80c2f6e6172b2.png"
+            }
+            
+        }
+    ]
+}

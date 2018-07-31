@@ -1,0 +1,66 @@
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css ">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js "></script>-->
+<script type = "text/javascript" src="home.js"></script>
+</head>
+<body ng-app="app" ng-controller = "cntrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <h1>Burgers </h1>
+                <hr>
+                <div class="row">
+                    <b>Filter :</b> <button ng-click="fnfilter('5star')">5 Star</button>
+                    <button ng-click="fnfilter('3star')">3 Star</button>
+                    <button ng-click="fnfilter()">Clear Fliter</button>
+                    <button ng-click="fnfilter('Potato Onions')">Ingredient:Potato</button>
+                    <input placeholder="Search" type="text" ng-model="searchText" style="float:right">
+                </div>
+                <div class="row">
+                    <div ng-repeat="list in filteredList = (menuList | filter:StarFliter | filter:ingredients) | filter:searchText" class="col-xs-4">
+                        <div class="menuItem">
+                            <img ng-src="{{list.product.imgurl}}">
+                            <hr>
+                            <div>
+                                <b>{{list.product.name}} </b>
+                                <button style="float:right" ng-click='cart($index)'>Buy Now</button>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div><b>Price: </b>Rs. {{list.product.price}}
+                                <span style="color:red; float:right"><span class='fadeText'>Discount:</span><span>{{list.product.discount}}</span>
+                            </div>
+                            <div class="text-muted">
+                                Ingredients: {{list.product.ingredients}}
+                            </div>
+                            <div class="text-muted">
+                                Rating: {{list.product.rating}}
+                            </div>
+                                <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h3>Cart</h3>
+                <hr>
+                <div ng-repeat= "cartItem in cartArray track by $index">
+                    {{cartItem.product.name}}
+                    <span style="float:right">{{cartItem.product.price}}</span>
+                </div>
+                <div ng-show="cartArray.length>0">
+                    <hr>
+                <b>Total:</b><span style="float:right">{{cartTotalPrice}}</span>
+                    <br><br>
+                    <div><button ng-click="orderNotifiction()">Confirm Order</button></div>
+                    <br>
+                    <div  class="noticationdiv" ng-show="notifyFlag">Your Order will be Delivered in {{(cartArray.length * 10) + 10}} minutes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

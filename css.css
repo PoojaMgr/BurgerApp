@@ -1,0 +1,13 @@
+.menuItem {
+    height: auto;
+}
+.fadeText {
+    color: darkgrey;
+    font-size: 10px;
+}
+.noticationdiv {
+    background-color: rgb(242, 175, 175);
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+}
